@@ -346,13 +346,14 @@ const DB = {
   stage: "Stage 3.1",
   file: "files/الكورس الاول/باطني/th//ba3k1l7.pdf"
 },
-  // 🔹 مادة باطني نظري - مرحلة ثالثة تخدير
+  // 🔹 مادة باطني عملي - مرحلة ثالثة تخدير
   {
   id: "pr101",
   subject: "باطني عملي",
   number: 1,
-  title: "EXAMINATION OF RESPIRATORY SYSTEM",
-  teacher: "",
+  title: "introduction to general examination part 1",
+  titleExam: "lec1",
+  teacher: "د.انس حسين",
   dept: "anesthesia",
   stage: "Stage 3.1",
   file: "files/الكورس الاول/باطني/pr//1.pdf"
@@ -545,7 +546,18 @@ const DB = {
   file: "files/الكورس الاول/تخدير/th/8.pdf"
   
 },
-
+    // 🔹 مادة التخدير  العملي - مرحلة ثالثة تخدير
+   {
+  id: "anpr101",
+  subject: "تخدير عملي",
+  number: 1,
+  title: "OPIOIDS",
+   titleExam: "lec1",
+  teacher: "د.الان ",
+  dept: "anesthesia",
+  stage: "Stage 3.1",
+  file: "files/الكورس الاول/تخدير/pr/1.pdf"
+},
 // 🔹 مادة الجراحة النظري - مرحلة ثالثة تخدير
 {
   id: "s101",
@@ -681,41 +693,17 @@ const DB = {
 exams: [
   {
     id: "e16",
-    date: "2025-11-25",
-    time: "13:00",
-    day: "الثلاثاء",
-    name: "امتحان تخدير نظري",
+    date: "2025-10-12",
+    time: "14:00",
+    day: "الاحد",
+    name: " باطني عملي",
     dept: "anesthesia",
-    notes:["n101","n102","n103"],
+    notes:["pr101"],
     courses: ["الكورس الأول"],
-    remarks: "قاعة 6",
-    examType: " وهمي مد ثاني"
+    remarks: "قاعة 11",
+    examType: "  كوز عملي "
   },
-   {
-    id: "e16",
-    date: "2025-11-25",
-    time: "13:00",
-    day: "الثلاثاء",
-    name: "امتحان تخدير نظري",
-    dept: "anesthesia",
-    notes:["n101","n102","n103"],
-    courses: ["الكورس الأول"],
-    remarks: "قاعة 6",
-    examType: " وهمي مد ثاني"
-  },
-     {
-    id: "e26",
-    date: "2025-12-25",
-    time: "13:00",
-    day: "الثلاثاء",
-    name: "امتحان عناية نظري",
-    dept: "anesthesia",
-    notes:["n206","n205","n204"],
-    courses: ["الكورس الأول"],
-    remarks: "قاعة 6",
-    examType: " وهمي مد ثاني"
-  }
-
+  
 ]
 
 };
@@ -2069,3 +2057,4 @@ let notesLinks = e.notes.map(id=>{
          ? `<a href="${n.file}" download>${escapeHtml(n.title).slice(0,10)}...</a>` 
          : `<a href="${n.file}" download>${escapeHtml(n.title)}</a>`;
 }).join(', ');
+
